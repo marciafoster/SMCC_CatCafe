@@ -1,6 +1,7 @@
-### React YouTube Project
+### Cat Cafe App
 
-This project was created by team SMCC (Shaquala, Marcia, Christine, Christopher). 
+Cat Cafe - Allows users to adopt or foster a feline friend. Will have detailed
+profiles for each cat, including pictures, breed, information, and vaccination records. 
 
 
 # Trello Board 
