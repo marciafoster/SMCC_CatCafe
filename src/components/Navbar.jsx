@@ -13,20 +13,16 @@ export default function NavBar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item" style={{margin: "20px"}}> 
-              {/* <a className="nav-link active" aria-current="page" href="#">Home</a> */}
               <Link className="mx-2" to="/home">
                 Home
               </Link>
               </li>
             <li className="nav-item" style={{margin: "20px"}}>
-            
-              {/* <a className="nav-link" href="#">About</a> */}
-              <Link className="mx-2" to="/about">
+            <Link className="mx-2" to="/about">
                 About
               </Link>
             </li>
             <li className="nav-item" style={{margin: "20px"}}>
-              {/* <a className="nav-link" href="#">Pricing</a> */}
               <Link className="mx-2" to="/pricing">
                 Pricing
               </Link>
