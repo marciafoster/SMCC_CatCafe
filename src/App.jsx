@@ -1,5 +1,5 @@
 
-import Navbar from "./components/Navbar"
+import NavBar from "./components/NavBar";
 import Pricing from "./components/Pricing"
 import Home from "./components/Home"
 import About from "./components/About"
@@ -17,7 +17,7 @@ function App() {
 
     <Router>  
 
-      <Navbar />
+      <NavBar />
         <Routes>
         <Route path="/Home" element={<Home />} />
           <Route path="/about" element={<About />} />
