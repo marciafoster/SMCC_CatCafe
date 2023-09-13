@@ -1,11 +1,7 @@
-/* checkout.css */
-
-/* Style the container */
-
 body {
     background-color: pink;
   }
-  
+
 .checkout-container {
     max-width: 400px;
     margin: 0 auto;
