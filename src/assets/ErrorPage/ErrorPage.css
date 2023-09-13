@@ -1,0 +1,25 @@
+.error-page {
+    background-color: #f7bb97;
+    color: #fff;
+    height: calc(100vh - 100px);
+    padding: 100px;
+    text-align: center;
+}
+
+.error-page h1 {
+    font-family: 'Nova Flat';
+    font-size: 100px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+
+}
+
+.error-page h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.error-page p {
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
