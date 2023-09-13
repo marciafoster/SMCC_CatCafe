@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
+import './Checkout.css';
 
 const Checkout = () => {
     const [formData, setFormData] = useState({
         fullName: '',
         Email: '',
         phoneNumber: '', 
-        cardNumber: '',
-        billingAddress: '',
+        cardInformation: '',
+    
 
     });
 
@@ -22,7 +23,7 @@ const Checkout = () => {
 
   return (
     <div>
-      <h1>Checkout</h1>
+      <h1>Finalize Your Furry Friend's Adoption</h1>
       <form onSubmit={handleSubmit}> 
      
         <div>
@@ -59,29 +60,19 @@ const Checkout = () => {
           />
         </div>
         <div>
-          <label htmlFor="cardNumber">Card Number</label>
+          <label htmlFor="cardInformation">Card Information</label>
           <input
             type="text"
-            id="cardNumber"
-            name="cardNumber"
-            value={formData.phoneNumber}
+            id="cardInformation"
+            name="cardInformation"
+            value={formData.cardInformation}
             onChange={handleInputChange}
             required
           />
         </div>
-        <div>
-          <label htmlFor="billingAddress">Billing Address</label>
-          <input
-            type="text"
-            id="billingAddress"
-            name="billingAddress"
-            value={formData.phoneNumber}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        {/* Add more form fields for card details, address, etc. */}
-        <button type="submit">Place Order</button>
+      
+       
+        <button type="submit">Adopt</button>
       </form>
     </div>
   );
