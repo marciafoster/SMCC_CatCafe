@@ -1,8 +1,29 @@
-# React + Vite
+### Cat Cafe App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cat Cafe - Allows users to adopt or foster a feline friend. Will have detailed
+profiles for each cat, including pictures, breed, information, and vaccination records. 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Trello Board 
+[https://trello.com/b/cqq1HLku/smcc-cats-cafe-app]
+
+
+# Live Site Netlify
+ [https://smcc-cats-cafe.netlify.app/] 
+
+
+# Getting Started with Create React App
+This project was built with Create React App.
+
+# Available Scripts
+In the project directory, you can run:
+### `npm install`
+Installs dependencies.
+### `npm run dev`
+Runs the app in the development mode.
+Open http://localhost:5175 to view it in your browser.
+
+The page will reload when you make changes.
+
+
+

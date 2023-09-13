@@ -1,34 +1,17 @@
-
-import NavBar from "./components/NavBar";
-import Pricing from "./components/Pricing"
-import Home from "./components/Home"
-import About from "./components/About"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css"
-
-
+import { useState } from 'react'
+import './App.css'
+import Checkout from './assets/Checkout.jsx'
 
 function App() {
 
  
 
   return (
-   
-
-    <Router>  
-
-      <NavBar />
-        <Routes>
-        <Route path="/Home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/pricing" element={<Pricing />} />
-        </Routes>
-     </Router>
-      
-    
-      
-    )
-  }
+    <>
+    < Checkout />
+    </>
+  )
+}
 
 export default App
 
