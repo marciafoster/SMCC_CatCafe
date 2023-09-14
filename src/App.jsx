@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // import { useState } from 'react'
 
 import Checkout from './components/Checkout.jsx'
@@ -8,12 +7,6 @@ import Home from "./components/Home.jsx"
 import About from "./components/About.jsx"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
-=======
-import { useState } from 'react';
-import './App.css';
-import Checkout from './Components/Checkout.jsx';
-// import ErrorPage from './Components/ErrorPage';
->>>>>>> bd65c7c86bc59b2230c480aa2871d4d8274f3c2f
 
 const url = 'https://cat-breeds.p.rapidapi.com/cat_breeds';
 const options = {
@@ -39,7 +32,6 @@ function App() {
 
   return (
     <>
-<<<<<<< HEAD
 
     <Router>
 
@@ -57,9 +49,6 @@ function App() {
     
     
 
-=======
-      < Checkout />
->>>>>>> bd65c7c86bc59b2230c480aa2871d4d8274f3c2f
     </>
   )
 }
