@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Checkout.css';
 
 const Checkout = () => {
@@ -23,7 +23,7 @@ const Checkout = () => {
 
   return (
     <div>
-      <h1>Finalize Your Furry Friend's Adoption</h1>
+      <h1>Finalize Your Furry Friends Adoption</h1>
       <form onSubmit={handleSubmit}> 
      
         <div>
