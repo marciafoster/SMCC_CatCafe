@@ -1,10 +1,10 @@
 // import { useState } from 'react'
 
-import Checkout from './Components/Checkout.jsx'
-import Navbar from "./Components/Navbar.jsx"
-import Pricing from "./Components/Pricing.jsx"
-import Home from "./Components/Home.jsx"
-import About from "./Components/About.jsx"
+import Checkout from './components/Checkout.jsx'
+import Navbar from "./components/NavBar.jsx"
+import Pricing from "./components/Pricing.jsx"
+import Home from "./components/Home.jsx"
+import About from "./components/About.jsx"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
 
@@ -17,10 +17,10 @@ function App() {
 
     <Router>
 
-    < Checkout />
-    < Navbar />
+    <Checkout />
+    <Navbar />
 
-     <Routes>
+    <Routes>
        <Route path="/Home" element={<Home />} />
        <Route path="/about" element={<About />} />
        <Route path="/pricing" element={<Pricing />} />
