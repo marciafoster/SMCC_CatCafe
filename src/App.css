@@ -1,42 +1,59 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+.nav {
+  align-items: stretch;
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
   text-align: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  gap: 2rrm;
+  padding: 0 1rem
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.navbar-brand {
+ 
+color:blue;
+font-size: 50px;
+font-weight: bold;
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.nav li.active {
+
+  background-color: blue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+.nav li:hover {
+
+  background-color: whitesmoke;
 }
 
-.card {
-  padding: 2em;
+body {
+
+  background-color: rgb(224, 206, 224);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-image: url("doublecats.jpeg");
+
+} 
+
+.nav-item {
+
+  font-size: 30px;
+
 }
 
-.read-the-docs {
-  color: #888;
+
+.center h1 {
+
+  
+  display: grid;
+  justify-content: center;
+ 
 }
