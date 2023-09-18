@@ -3,7 +3,7 @@ import './ABout.css';
 
 export default function About() {
   const projectBio =
-    "This project was built by a team of 4 developers. We used a React VITE framework to create a Youtube clone that allows the user to search & display a single video as well as the ability to share & send any video. ";
+    " This project was built by a team of 4 developers. We used a React VITE framework to create an app for Cat Adoption whic can be used by any cat cafes.";
 
   const developers = [
     {
