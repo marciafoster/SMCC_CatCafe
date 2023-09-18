@@ -1,3 +1,8 @@
+
+const CatsApi = async ()=>{ 
+
+
+
 const url = 'https://cat-breeds.p.rapidapi.com/cat_breeds';
 const options = {
 	method: 'GET',
@@ -9,10 +14,11 @@ const options = {
 
 try {
 	const response = await fetch(url, options);
-	const result = await response.json();
-	 console.log(result);
+	const data = await response.json();
+	 console.log(data);
+	 return data
 } catch (error) {
 	console.error(error);
 }
-
-
+}
+export default CatsApi
