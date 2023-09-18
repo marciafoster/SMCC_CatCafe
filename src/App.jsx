@@ -1,57 +1,71 @@
-// import { useState } from 'react'
-
-import Checkout from './components/Checkout.jsx'
-import Navbar from "./components/NavBar.jsx"
-import Pricing from "./components/Pricing.jsx"
-import Home from "./components/Home.jsx"
-import About from "./components/About.jsx"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
+import Card from "./assets/Card"
+import Cart from "./assets/Cart"
+import CatsApi from "./assets/CatsApi"
+import CatsList from "./assets/CatsList"
 
-const url = 'https://cat-breeds.p.rapidapi.com/cat_breeds';
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '06dac55145msh43ca0f365b5b73cp138cdfjsn37f31adbc82f',
-		'X-RapidAPI-Host': 'cat-breeds.p.rapidapi.com'
-	}
-};
 
-try {
-	const response = await fetch(url, options);
-	const result = await response.json();
-	 console.log(result);
-} catch (error) {
-	console.error(error);
-}
+
+
+
+
+// const url = 'https://cat-breeds.p.rapidapi.com/cat_breeds';
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '06dac55145msh43ca0f365b5b73cp138cdfjsn37f31adbc82f',
+// 		'X-RapidAPI-Host': 'cat-breeds.p.rapidapi.com'
+// 	}
+// };
+
+// try {
+// 	const response = await fetch(url, options);
+// 	const data = await response.json();
+// 	 console.log(data);
+// } catch (error) {
+// 	console.error(error);
+
+// }
+
+
+
 
 
 
 
 function App() {
+  const [count, setCount] = useState(0)
+  const [breed, setBreed] = useState(null)
+  const [cart, setCart] = useState([])
+
+  const handleCart =(breed) => {
+    if (cart.includes(breed)) {
+      alert ("You have already added this breed to the cart")
+      return
+    }
+    setCart([...cart, breed])
+  }
+  function reset() {
+    setCart([])
+  }
 
   return (
     <>
-
-    <Router>
-
-    <Checkout />
-    <Navbar />
-
-    <Routes>
-       <Route path="/Home" element={<Home />} />
-       <Route path="/about" element={<About />} />
-       <Route path="/pricing" element={<Pricing />} />
-
-     </Routes>
-
-    </ Router>
+    <div className="container">
+      <aside>
+        {/* <Cart breed={breed} cart={cart} setCart={setCart} /> */}
+      </aside>
+    </div> 
+      
     
-    
-
+        {/* < Card breed={breed} cart={cart} handleCart={handleCart} /> */}
+        < CatsList />
+      
     </>
   )
 }
 
 export default App
-
