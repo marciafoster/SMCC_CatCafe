@@ -17,20 +17,20 @@ export default function About() {
     {
       name: "Marcia",
       bio:
-        " ",
+        "Marcia is a driven home-based bakery owner who's passionate about creating custom cakes and treats. As a Pursuit fellow on the path to full-stack software development, she merges her love for crafting from scratch with her desire of learning to code. Marcia enjoys traveling,exploring new cultures, and trying new foods.",
       githubLink: "https://github.com/marciafoster",
       image: "https://avatars.githubusercontent.com/u/124259577?v=4"
     },
     {
       name: "Christine",
-      bio: "",
+      bio: " Christine is a cat lover. She rescued both of her cats Felix & Figaro.",
       githubLink: "https://github.com/ChristineMarchese",
       image: "https://avatars.githubusercontent.com/u/115177980?v=4"
     },
 
     {
       name: "Chris",
-      bio: " ",
+      bio: "As an aspiring software engineer, I seek to merge my expertise in veterinary and human healthcare 🩺 with my technical 🧑‍💻skills.",
       githubLink: "https://github.com/CSAN7690",
       image: "https://avatars.githubusercontent.com/u/127960419?v=4"
     }
