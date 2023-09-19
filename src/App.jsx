@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import About from "./components/About.jsx"
+import Checkout from "./components/Checkout.jsx"
+import ErrorPage from "./components/ErrorPage.jsx"
+import Home from "./components/Home.jsx"
+import NavBar from "./components/NavBar.jsx"
+import Pricing from "./components/Pricing.jsx"
 import './App.css'
-import Card from "./assets/Card"
-import Cart from "./assets/Cart"
-import CatsApi from "./assets/CatsApi"
-import CatsList from "./assets/CatsList"
+import Cart from "./components/Cart"
+import CatsApi from "./components/CatsApi"
+import CatsList from "./components/CatsList"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 
@@ -54,6 +58,27 @@ function App() {
 
   return (
     <>
+     <>
+
+<Router>
+
+<Checkout />
+<NavBar />
+ < CatsList />
+<Routes>
+   <Route path="/Home" element={<Home />} />
+   <Route path="/about" element={<About />} />
+   <Route path="/pricing" element={<Pricing />} />
+   <Route path="/catsapi" element={<CatsList />} />
+
+
+ </Routes>
+
+</ Router>
+
+
+
+</>
     <div className="container">
       <aside>
         {/* <Cart breed={breed} cart={cart} setCart={setCart} /> */}
@@ -62,9 +87,11 @@ function App() {
       
     
         {/* < Card breed={breed} cart={cart} handleCart={handleCart} /> */}
-        < CatsList />
+       
       
     </>
+
+    
   )
 }
 
