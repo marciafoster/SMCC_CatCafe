@@ -10,14 +10,16 @@ const CatsApi = async () => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '06dac55145msh43ca0f365b5b73cp138cdfjsn37f31adbc82f',
+      'X-RapidAPI-Key': '1e6f726fcemsh8a15ed39832b6b0p1855a7jsn5244076c03bb',
       'X-RapidAPI-Host': 'cat-breeds.p.rapidapi.com',
     },
   };
 
   try {
     const response = await axios.get(url, { ...options });
-    return response.data;
+    const data = response.data; // Capture the response data
+    console.log(data); // Log the data to the console
+    return data; // Return the data
   } catch (error) {
     console.error(error);
     return [];
@@ -25,5 +27,3 @@ const CatsApi = async () => {
 };
 
 export default CatsApi;
-
-

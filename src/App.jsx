@@ -1,98 +1,51 @@
-import { useState, useEffect } from 'react'
-import About from "./components/About.jsx"
-import Checkout from "./components/Checkout.jsx"
-import ErrorPage from "./components/ErrorPage.jsx"
-import Home from "./components/Home.jsx"
-import NavBar from "./components/NavBar.jsx"
-import Pricing from "./components/Pricing.jsx"
-import './App.css'
-import Cart from "./components/Cart"
-import CatsApi from "./components/CatsApi"
-import CatsList from "./components/CatsList"
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-
-
-
-
-
-// const url = 'https://cat-breeds.p.rapidapi.com/cat_breeds';
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '06dac55145msh43ca0f365b5b73cp138cdfjsn37f31adbc82f',
-// 		'X-RapidAPI-Host': 'cat-breeds.p.rapidapi.com'
-// 	}
-// };
-
-// try {
-// 	const response = await fetch(url, options);
-// 	const data = await response.json();
-// 	 console.log(data);
-// } catch (error) {
-// 	console.error(error);
-
-// }
-
-
-
-
-
-
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./components/About.jsx";
+import Checkout from "./components/Checkout.jsx";
+import Home from "./components/Home.jsx";
+import NavBar from "./components/NavBar.jsx";
+import Adopt from "./components/Adopt.jsx";
+import CatsList from "./components/CatsList.jsx";
+import Cart from "./components/Cart.jsx";
+import ErrorPage from "./components/ErrorPage.jsx"; 
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [breed, setBreed] = useState(null)
-  const [cart, setCart] = useState([])
+    const [cart, setCart] = useState([]);
+    const [showCatsList, setShowCatsList] = useState(false);
 
-  const handleCart =(breed) => {
-    if (cart.includes(breed)) {
-      alert ("You have already added this breed to the cart")
-      return
-    }
-    setCart([...cart, breed])
-  }
-  function reset() {
-    setCart([])
-  }
+    const handleCart = (breedObj) => {
+        if (cart.some((item) => item.id === breedObj.id)) {
+            alert("You have already added this breed to the cart");
+            return;
+        }
+        setCart([...cart, breedObj]);
+    };
 
-  return (
-    <>
-     <>
+    const toggleCatsList = () => {
+        setShowCatsList(!showCatsList);
+    };
 
-<Router>
+    return (
+      <Router>
+      {/* <Checkout /> */}
+      <NavBar showCatsList={showCatsList} toggleCatsList={toggleCatsList} cart={cart} />
+      <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/adopt" element={showCatsList ? <CatsList cart={cart} setCart={setCart} /> : <Adopt />} />
+  <Route path="/checkout" element={<Checkout />} />
+  <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
+  <Route path="/catslist" element={<CatsList cart={cart} setCart={setCart} />} />
+  <Route path="/checkout" component={Checkout} />
+                <Route path="/error" component={ErrorPage} />
+                {/* <Route path="/success" component={SuccessPage} />  */}
+          
+</Routes>
 
-<Checkout />
-<NavBar />
- < CatsList />
-<Routes>
-   <Route path="/Home" element={<Home />} />
-   <Route path="/about" element={<About />} />
-   <Route path="/pricing" element={<Pricing />} />
-   <Route path="/catsapi" element={<CatsList />} />
-
-
- </Routes>
-
-</ Router>
-
-
-
-</>
-    <div className="container">
-      <aside>
-        {/* <Cart breed={breed} cart={cart} setCart={setCart} /> */}
-      </aside>
-    </div> 
-      
+                
+    </Router>
     
-        {/* < Card breed={breed} cart={cart} handleCart={handleCart} /> */}
-       
-      
-    </>
-
-    
-  )
+    );
 }
 
-export default App
+export default App;

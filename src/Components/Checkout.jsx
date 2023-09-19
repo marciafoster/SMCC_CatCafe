@@ -6,10 +6,13 @@ const Checkout = () => {
         fullName: '',
         Email: '',
         phoneNumber: '', 
-        cardInformation: '',
+        cardNumber: '',
+        cvv:'',
     
 
     });
+
+   
 
     const handleInputChange = (e) => { 
         const { name, value } = e.target;
@@ -23,7 +26,10 @@ const Checkout = () => {
 
   return (
     <div>
-      <h1>Finalize Your Furry Friends Adoption</h1>
+      <h1>Finalize Your Furry Friends Adoption
+        <br></br>
+        Total $100
+      </h1>
       <form onSubmit={handleSubmit}> 
      
         <div>
