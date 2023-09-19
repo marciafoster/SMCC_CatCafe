@@ -53,7 +53,7 @@ export default function About() {
               {developer.name}
             </h3> {/* Some fancy effects ✨ */}
             <p>{developer.bio}</p>
-            <a href={developer.githubLink}>{developer.name}'s GitHub Link</a>
+            <a href={developer.githubLink}>{developer.name}s GitHub Link</a>
           </div>
         ))}
       </div>
