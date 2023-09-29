@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./components/About.jsx";
 import Checkout from "./components/Checkout.jsx";
 import Home from "./components/Home.jsx";
-import NavBar from "./components/NavBar.jsx";
+import NavBar from "./components/Navbar.jsx";
 import Adopt from "./components/Adopt.jsx";
 import CatsList from "./components/CatsList.jsx";
 import Cart from "./components/Cart.jsx";
@@ -37,8 +37,9 @@ function App() {
   <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
   <Route path="/catslist" element={<CatsList cart={cart} setCart={setCart} />} />
   <Route path="/checkout" component={Checkout} />
-                <Route path="/error" component={ErrorPage} />
-                {/* <Route path="/success" component={SuccessPage} />  */}
+  <Route path="*" element={<ErrorPage />} />
+                {/* <Route path="/error" component={ErrorPage} /> */}
+                {/* <Route path="/success" component={SuccessPage} />  */} 
           
 </Routes>
 
